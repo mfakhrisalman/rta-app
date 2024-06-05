@@ -1,0 +1,72 @@
+.map-container-2{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-container-2 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+  /* login */
+  .form-signin{
+    margin-top: 20%;
+  }
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 20px;
+  }
+
+  /* kontak */
+  .form-callme{
+    margin-top: 17%;
+  }
+  .form-callme .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-callme input[type="email"] {
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  .form-callme-1 {
+    margin-bottom: 30px;
+    width: 80%;
+
+  }
+  .form-callme-2 {
+    margin-bottom: 30px;
+    width: 80%;
+  } 
+
+/* Daftar */
+
+.form-daftar{
+  margin-top: 0%;
+}
+.form-daftar .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-daftar input[type="text"] {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.form-daftar input[type="email"] {
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+}
