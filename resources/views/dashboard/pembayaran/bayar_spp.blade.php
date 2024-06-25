@@ -46,7 +46,7 @@
                                     </div>
                                         <input type="hidden" id="status" name="status" value="Menunggu Konfirmasi"/>
                                         <input type="hidden" id="id" name="id" value="{{ old('id', $tagihan->id) }}"/>
-                                    <button type="submit" class="waves-effect waves-light btn">Send</button>
+                                    <button type="submit" class="waves-effect waves-light btn indigo">Kirim</button>
                                 </div>
                             </form>
                         </div>

@@ -49,7 +49,7 @@
                                                 <form id="delete-form-{{ $jadwal->id }}" action="/buat-jadwal/{{ $jadwal->id }}" method="post">
                                                     @method('delete')
                                                     @csrf
-                                                    <button type="button" onclick="deleteJadwal('{{ $jadwal->id }}')" class="waves-block btn-flat">
+                                                    <button type="button" onclick="deleteJadwal('{{ $jadwal->id }}', '{{ $jadwal->name }}', '{{ $jadwal->year }}')" class="waves-block btn-flat">
                                                         <i class="material-icons red-text">delete</i>
                                                     </button>
                                                 </form>
@@ -75,27 +75,42 @@
         <div class="content-overlay"></div>
     </div>
     <script>
-        function deleteJadwal(id) {
-            swal({
-                title: "Apakah Anda yakin?",
-                text: "Anda tidak akan dapat memulihkan data ini!",
-                icon: 'warning',
-                buttons: {
-                    cancel: 'Tidak, batalkan!',
-                    delete: 'Ya, hapus itu!'
-                },
-                dangerMode: true,
-            }).then(function (willDelete) {
-                if (willDelete) {
-                    // Submit the form to delete the record
-                    document.getElementById('delete-form-' + id).submit();
-                } else {
-                    swal("Data Anda aman", {
-                        title: 'Dibatalkan',
-                        icon: "error",
-                    });
-                }
-            });
-        }
+    function deleteJadwal(id, nameVal, year) {
+        swal({
+            title: "Apakah Anda yakin?",
+            text: "Anda tidak akan dapat memulihkan data ini!",
+            icon: 'warning',
+            buttons: {
+                cancel: 'Tidak, batalkan!',
+                delete: 'Ya, hapus itu!'
+            },
+            dangerMode: true,
+        }).then(function (willDelete) {
+            if (willDelete) {
+                // Tambahkan parameter ke form
+                var form = document.getElementById('delete-form-' + id);
+                var inputName = document.createElement('input');
+                inputName.type = 'hidden';
+                inputName.name = 'name';
+                inputName.value = nameVal;
+
+                var inputYear = document.createElement('input');
+                inputYear.type = 'hidden';
+                inputYear.name = 'year';
+                inputYear.value = year;
+
+                form.appendChild(inputName);
+                form.appendChild(inputYear);
+
+                // Submit the form to delete the record
+                form.submit();
+            } else {
+                swal("Data Anda aman", {
+                    title: 'Dibatalkan',
+                    icon: "error",
+                });
+            }
+        });
+    }
     </script>
 @endsection

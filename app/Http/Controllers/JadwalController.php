@@ -13,10 +13,10 @@ class JadwalController extends Controller
      */
     public function index()
     {
-        // $jadwal = Jadwal::all();
-        $jadwal = Jadwal::selectRaw('name, year')
-                        ->groupBy('name', 'year')
-                        ->get();
+        $jadwal = Jadwal::selectRaw('MIN(id) as id, name, year')
+        ->groupBy('name', 'year')
+        ->get();
+
         return view('dashboard.jadwal.index', ['jadwals' => $jadwal]);
     }
 
@@ -73,16 +73,23 @@ class JadwalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        // Mencari jadwal berdasarkan ID
-        dd($id);
-        $jadwal = Jadwal::findOrFail($id);
-
-        // Menghapus jadwal
-        $jadwal->delete();
-
-        // Redirect kembali dengan pesan sukses
-        return redirect('/buat-jadwal')->with('success', 'Jadwal ujian berhasil dihapus');
+        // Validasi permintaan
+        $request->validate([
+            'name' => 'required|string',
+            'year' => 'required|string',
+        ]);
+    
+        // Dapatkan data yang akan dihapus
+        $name = $request->input('name');
+        $year = $request->input('year');
+    
+        // Hapus semua tagihan dengan atribut yang sama
+        Jadwal::where('name', $name)
+               ->where('year', $year)
+               ->delete();
+    
+        return redirect('/buat-jadwal')->with('success', 'Jadwal berhasil dihapus.');
     }
 }

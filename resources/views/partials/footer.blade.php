@@ -1,4 +1,4 @@
-<footer class="py-5 mt-5 p-3"style="background-color:#013A67;">
+<footer class="py-5 mt-5 p-3" style="background-color:#013A67;">
   <div class="row">
     <div class="col-md-6 col-lg-3 d-flex justify-content-center">
       <div id="map-container-google-2" class="z-depth-1-half map-container">
@@ -11,13 +11,13 @@
     <div class="col-md-6 col-lg-7 mt-2">
       <h5 class="text-white">Rumah Tahfizh Akhawat Raudhatul Jannah (RTA)</h5>
       <div class="text-monospace"> 
-      <h6 style="color: #99B0C2">Jalan Serasi Gg. Serasi 1 RT. 001 RW. 10
+      <h6 style="color: #99B0C2">Jalan Serasi Gg. Serasi 1 RT. 001 RW. 10</h6>
       <h6 style="color: #99B0C2">Kel. Tobek Gadang, Kec. Bina Widya, Pekanbaru, Riau</h6>
       <h6 style="color: #99B0C2">0811 6646 6330</h6>   
     </div>
     </div>
     <div class="col-lg-2 d-flex justify-content-center">
-      <a href="#" ><img src="{{ asset('img/Logo.png') }}" alt="Logo RTA" ></a>
+      <a href="/" ><img src="{{ asset('img/Logo.png') }}" alt="Logo RTA" ></a>
     </div>
   </div>
-  </footer>
+</footer>

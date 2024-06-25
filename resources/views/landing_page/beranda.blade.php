@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="col-md-9 text-center mx-auto p-5 ">
-  <b><h1>Pendidikan Tahfizh Al-Quran Berkualitas untuk Muslimah Pekanbaru</h1></b>
+  <b><h1 style="color:#013A67;">Pendidikan Tahfizh Al-Quran Berkualitas untuk Muslimah Pekanbaru</h1></b>
 </div>
 <div id="carouselExampleDark" class="carousel carousel-dark slide col-9 mx-auto">
   <div class="carousel-indicators">
@@ -46,7 +46,7 @@
   <p class="mt-5">
     RTA memiliki izin resmi untuk berdiri dibawah Kementrian Agama Republik Indonesia pada tahun 2021 dan kami berkomitmen membantu Muslimah yang berdomisili di kota Pekanbaru untuk mendapat pendidikan tahfizh Al-Qur’an yang berkualitas. Tidak hanya menyejahterakan secara akademis, kami juga bertekad untuk menyejahterakan anggota kami dari aspek sosial.
   </p>
-  <h1 class="mt-5">
+  <h1 class="mt-5" style="color:#013A67;">
     Mengapa Memilih RTA?
   </h1>
   <p class="mt-5">

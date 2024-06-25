@@ -62,6 +62,7 @@
                     </div>
                 </div>
             </section>
+            @can('guru')
             <div style="bottom: 50px; right: 19px;" class="fixed-action-btn direction-top">
                 <form action="/guru/create">
                     <button class="btn-floating btn-large waves-effect waves-light btn gradient-45deg-green-teal z-depth-4 mr-1 mb-2">
@@ -69,6 +70,7 @@
                     </button>
                 </form>
             </div>
+            @endcan
         </div>
         <div class="content-overlay"></div>
     </div>

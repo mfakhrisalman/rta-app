@@ -54,7 +54,7 @@
                                         </select>
                                     </div>
                                         <input type="hidden" id="status" name="status" value="Sudah Daftar"/>
-                                    <button type="submit" class="waves-effect waves-light btn">Daftar</button>
+                                    <button type="submit" class="waves-effect waves-light btn indigo">Daftar</button>
                                 </div>
                             </form>
                         </div>

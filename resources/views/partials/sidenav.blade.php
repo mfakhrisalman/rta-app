@@ -1,4 +1,5 @@
 <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light sidenav-active-square">
+    {{-- <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark gradient-shadow gradient-45deg-blue-grey-blue sidenav-active-square sidenav-gradient"> --}}
     <div class="brand-sidebar">
         <div class="row mt-2">
             <div class="col s2 mt-2 pr-0 circle">

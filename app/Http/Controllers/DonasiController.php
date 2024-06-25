@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\donasi;
+use App\Models\Donasi;
 use Illuminate\Http\Request;
 
 class DonasiController extends Controller

@@ -16,25 +16,20 @@
   </div>
 
   <div class="col mb-3">
-    <div id="sliderGedung" class="carousel slide">
+    <div id="sliderGedung" class="carousel slide carousel-fade">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#sliderGedung" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#sliderGedung" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        {{-- <button type="button" data-bs-target="#sliderGedung" data-bs-slide-to="2" aria-label="Slide 3"></button> --}}
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/gedung2.png" class="d-block w-100" alt="..." style="width: 411px; height: 385px;">
+          <img src="img/gedung2.png" class="d-block w-100" alt="Gedung 2" style="width: 411px; height: 385px;">
           <div class="carousel-caption d-none d-md-block"></div>
         </div>
         <div class="carousel-item">
-          <img src="img/gedung.png" class="d-block w-100" alt="..." style="width: 411px; height: 385px;">
+          <img src="img/gedung.png" class="d-block w-100" alt="Gedung" style="width: 411px; height: 385px;">
           <div class="carousel-caption d-none d-md-block"></div>
         </div>
-        {{-- <div class="carousel-item">
-          <img src="img/gedung3.png" class="d-block w-100" alt="..." style="width: 411px; height: 385px;">
-          <div class="carousel-caption d-none d-md-block"></div>
-        </div> --}}
       </div>
       
       <button class="carousel-control-prev" type="button" data-bs-target="#sliderGedung" data-bs-slide="prev">
@@ -49,7 +44,7 @@
   </div>
   
   <div class="col mb-3">
-    <div id="sliderKelas" class="carousel slide">
+    <div id="sliderKelas" class="carousel slide carousel-fade">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#sliderKelas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#sliderKelas" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -57,15 +52,15 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/ruangan1.png" class="d-block w-100" alt="..." style="width: 411px; height: 385px;">
+          <img src="img/ruangan1.png" class="d-block w-100" alt="Ruangan 1" style="width: 411px; height: 385px;">
           <div class="carousel-caption d-none d-md-block"></div>
         </div>
         <div class="carousel-item">
-          <img src="img/ruangan2.png" class="d-block w-100" alt="..." style="width: 411px; height: 385px;">
+          <img src="img/ruangan2.png" class="d-block w-100" alt="Ruangan 2" style="width: 411px; height: 385px;">
           <div class="carousel-caption d-none d-md-block"></div>
         </div>
         <div class="carousel-item">
-          <img src="img/ruangan3.png" class="d-block w-100" alt="..." style="width: 411px; height: 385px;">
+          <img src="img/ruangan3.png" class="d-block w-100" alt="Ruangan 3" style="width: 411px; height: 385px;">
           <div class="carousel-caption d-none d-md-block"></div>
         </div>
       </div>
