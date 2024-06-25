@@ -17,7 +17,7 @@
     </div>
     </div>
     <div class="col-lg-2 d-flex justify-content-center">
-      <a href="#" ><img src="img/logo.png" alt="Logo RTA" ></a>
+      <a href="#" ><img src="{{ asset('img/Logo.png') }}" alt="Logo RTA" ></a>
     </div>
   </div>
   </footer>

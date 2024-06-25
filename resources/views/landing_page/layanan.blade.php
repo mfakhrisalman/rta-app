@@ -20,7 +20,7 @@
       </div>
       @endif
       <main class="form-signin">
-        <a href="#" style="margin-left: 26%;"><img src="img/logo.png" alt="Logo RTA"></a>
+        <a href="#" style="margin-left: 26%;"><img src="{{ asset('img/Logo.png') }}" alt="Logo RTA"></a>
           <form action="/layanan" method="post">
             @csrf
             <div class="form-floating">

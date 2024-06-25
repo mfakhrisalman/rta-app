@@ -160,7 +160,7 @@
         </li>
         @endcan        
         <li class="center-align" style="position: absolute;bottom: 50px; text-align: center;width: 100%">
-            <img src="{{ asset('img/logo.png') }}" class="responsive-img " alt="">
+            <img src="{{ asset('img/Logo.png') }}" class="responsive-img " alt="">
         </li>
     </ul>
     <div class="navigation-background"></div>
