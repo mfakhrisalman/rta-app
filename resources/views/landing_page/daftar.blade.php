@@ -63,13 +63,15 @@
                         <label for="email">Email address</label>
                       </div>
                       <div class="form-floating">
+                        <!-- Ubah input menjadi textarea untuk alamat -->
+                        <textarea name="address" id="address" class="form-control" placeholder="Alamat" style="height: 150px;"></textarea>
+                        <label for="address">Alamat</label>
+                      </div>
+                      <div class="form-floating">
                           <input type="text" name="nohp" id="nohp" class="form-control"  placeholder="Nomor WhatsApp">
                           <label for="nohp">Nomor WhatsApp Aktif</label>
                       </div>                       
-                      <div class="form-floating">
-                        <input type="text" name="address" id="address" class="form-control" placeholder="Alamat">
-                        <label for="address">Alamat</label>
-                      </div>
+
                       <input type="hidden" name="class" value="{{ $program }}">
                       <input type="hidden" name="status" id="status" value="Diproses" >
                       <button class="w-100 btn btn-lg" style="background-color: #013A67; color: white" type="submit">KIRIM</button>
@@ -78,6 +80,5 @@
           </div>
           </div>
         </div>
-      </section>
 </body>
 </html>

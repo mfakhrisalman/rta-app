@@ -61,7 +61,7 @@
     <!-- BEGIN: Page Main-->
     <div id="main">
         <div class="row">
-            <div class="content-wrapper-before gradient-45deg-blue-grey-blue"></div>
+            <div class="content-wrapper-before " style="background-color: #1767A7;"></div>
 
             @yield('container')
         </div>

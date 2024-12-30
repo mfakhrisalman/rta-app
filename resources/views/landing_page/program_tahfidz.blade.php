@@ -2,9 +2,9 @@
 
 @section('container')
 <div class="col-md-9 text-center mx-auto">
-  <h1>Ingin mengikuti kelas tahfizh tapi terhalang banyak kesibukan? Kami punya solusinya.</h1>
-  <p class=" mb-5 mt-3">Kami mengerti akan kebutuhan siswa dan calon siswa kami dengan demografi yang sangat luas. Kami menawarkan beberapa program yang dapat menyesuaikan dengan jadwal siswa.</p>
-  <h4>Program Tahfizh</h4>
+  <h1 style="font-weight: bolder;">Ingin mengikuti kelas tahfizh tapi terhalang banyak kesibukan? Kami punya solusinya.</h1>
+  <p class=" mb-2 mt-5">Kami mengerti akan kebutuhan siswa dan calon siswa kami dengan demografi yang sangat luas. Kami menawarkan beberapa program yang dapat menyesuaikan dengan jadwal siswa.</p>
+  <b><h4>Program Tahfizh</h4></b>
 </div>
   <div class="row row-cols-1 row-cols-md-2 mt-5">
   

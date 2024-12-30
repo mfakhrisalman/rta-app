@@ -124,7 +124,7 @@
          @php
          $belumLunas = $spp->contains('status', 'Belum Lunas');
          @endphp
-         
+         <div class="col s12">
          @if($belumLunas)
                <div class="card-alert card gradient-45deg-purple-deep-orange">
                   <div class="card-content white-text">
@@ -142,30 +142,57 @@
                   </div>
                </div>
          @endif
-     
+         </div>
          <div class="col s12 m8 card-width">
             <div class="card border-radius-6">
               <div class="card-content center-align">
                <table class="striped">
                   <tbody>
-                        @foreach($dataKelas as $kelas)
-                        <tr>
-                           <td>Nama Kelas</td>
-                           <td>: {{ $kelas->name_class }}</td>
-                         </tr>
-                        <tr>
-                            <td>Kelas</td>
-                            <td>: {{ $kelas->type_class }}</td>
-                        </tr>
-                        <tr>
-                            <td>Musyrifah</td>
-                            <td>: {{ $kelas->name_teacher }}</td>
-                        </tr>
-                        <tr>
-                            <td>Ruangan</td>
-                            <td>: {{ $kelas->room }}</td>
-                        </tr>
-                        @endforeach
+                     @forelse($dataKelas as $kelas)
+                     <tr>
+                         <td>Nama</td>
+                         <td>: {{ auth()->user()->name }}</td>
+                     </tr>                        
+                     <tr>
+                         <td>Nama Kelas</td>
+                         <td>: {{ $kelas->name_class }}</td>
+                     </tr>
+                     <tr>
+                         <td>Kelas</td>
+                         <td>: {{ $kelas->type_class }}</td>
+                     </tr>
+                     <tr>
+                         <td>Musyrifah</td>
+                         <td>: {{ $kelas->name_teacher }}</td>
+                     </tr>
+                     <tr>
+                         <td>Ruangan</td>
+                         <td>: {{ $kelas->room }}</td>
+                     </tr>
+                 @empty
+                  <tr>
+                     <td>Nama</td>
+                     <td>: {{ auth()->user()->name }}</td>
+                  </tr>                        
+                  <tr>
+                        <td>Nama Kelas</td>
+                        <td>:</td>
+                  </tr>
+                  <tr>
+                        <td>Kelas</td>
+                        <td>: </td>
+                  </tr>
+                  <tr>
+                        <td>Musyrifah</td>
+                        <td>: </td>
+                  </tr>
+                  <tr>
+                        <td>Ruangan</td>
+                        <td>: </td>
+                  </tr>
+
+                 @endforelse
+                 
                   </tbody>
                 </table>
               </div>

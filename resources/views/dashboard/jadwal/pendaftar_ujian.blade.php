@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col s10 m6 l6">
-                <h5 class="breadcrumbs-title mt-0 mb-0"><span>Data jadwal Ujian</span></h5>
+                <h5 class="breadcrumbs-title mt-0 mb-0"><span>Data Pendaftar Ujian</span></h5>
                 <ol class="breadcrumbs mb-0">
                     <li class="breadcrumb-item"><a href="/dashboard">Home</a>
                     </li>

@@ -1,7 +1,7 @@
 <header class="page-topbar" id="header">
     <div class="navbar navbar-fixed">
         <nav
-            class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark gradient-45deg-blue-grey-blue no-shadow">
+            class="navbar-main navbar-color nav-collapsible sideNav-lock no-shadow" style="background-color: #1767A7;">
             <div class="nav-wrapper">
                 <div class="header-search-wrapper hide-on-med-and-down">
                     <input class="header-search-input z-depth-2" type="text" placeholder="as-salāmu ʿalaykum wa-raḥmatu -llāhi wa-barakātuh, Ahlan wa sahlan bi hudluurikum." readonly disabled>
@@ -13,14 +13,14 @@
                             <i class="material-icons">settings_overscan</i>
                         </a>
                     </li>
-                    <li class="hide-on-med-and-down">
+                    <li class="">
                         <a class="waves-effect waves-block waves-light" href="{{ route('password.change') }}">
                             <i class="material-icons">
-                                <img src="{{ asset('img/secure.png') }}" alt="Mengubah Password" width="27">
+                                <img src="{{ asset('img/secure.png') }}" alt="Mengubah Password" width="27" style="justify-content: center;align-items: center; padding-top:15px">
                             </i>
                         </a>
                     </li>
-                    <li class="show-on-med-and-down">
+                    <li class="">
                     <form action="/logout" method="post">
                         @csrf
                         <button class=" btn-floating mb-1 btn-large btn-flat waves-effect waves-light ">

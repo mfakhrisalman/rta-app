@@ -22,6 +22,8 @@ class KritikSaranController extends Controller
             'email' => 'required',
             'message' => 'required',
         ]);
+
+        dd($validatedData);
     
         KritikSaran::create($validatedData);
     

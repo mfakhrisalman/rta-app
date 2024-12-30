@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="col-md-9 text-center mx-auto">
-  <h1>RTA memastikan kamu mendapat suasana belajar yang nyaman dengan berbagai fasilitas yang kami tawarkan</h1>
-  <p class="mt-5 ">
+<div class="col-md-12 text-center mx-auto">
+  <h1 style="font-weight: bolder;">RTA memastikan kamu mendapat suasana belajar yang nyaman dengan berbagai fasilitas yang kami tawarkan</h1>
+  <p class="mt-5 col-md-9 text-center mx-auto">
     Kami menawarkan berbagai fasilitas yang mendukung kenyamanan suasana belajar-mengajar dan pelaksanaan kegiatan non-akademik agar tetap kondusif.
   </p>
 </div>
@@ -11,7 +11,7 @@
 <div class="row row-cols-1 row-cols-md-2 mt-5">
   
   <div class="col mb-3 p-5">
-    <h1>Gedung luar RTA</h1>
+    <h1 style="font-weight: bolder;">Gedung luar RTA</h1>
     <p class="mt-3 text-justify">Rumah Tahfizh Akhwat Raudhatul Jannah resmi berdiri dibawah naungan Kemenang RI pada tahun 2021. Pada tahun tersebut juga, gedung RTA didirikan dan hingga sekarang, gedung RTA masih dalam tahap pembangunan. Saat ini, gedung RTA memiliki 13 ruang kelas yang dapat dipakai untuk belajar. </p>
   </div>
 
@@ -77,7 +77,7 @@
   </div>
 
   <div class="col mb-3 p-5">
-    <h1>Ruang kelas RTA</h1>
+    <h1 style="font-weight: bolder;">Ruang kelas RTA</h1>
     <div class="p-3">
     <p>RTA memiliki total 4 program kelas sebanyak:</p>
     <p>1. 11 kelas anak-anak  (senin - jumat pukul 15.00-17.00 WIB).</p>

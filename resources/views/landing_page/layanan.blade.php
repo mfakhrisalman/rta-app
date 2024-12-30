@@ -5,7 +5,7 @@
   <div class="col-lg-6 d-none d-lg-block" style="margin-left: -100px; margin-top: -30px; margin-bottom: -20px;">
     <div class="card mw-100 mb-3 mh-100" style="background-color: #013A67; border-radius: 16px; height: 670px; width: 85%; ">
       <div class="card-body">
-        <h1 class="card-title p-4 text-white">Selamat Datang di Portal Rumah Tahfizh Akhwat Raudhatul Jannah</h1>
+        <h1 class="card-title p-4 text-white mt-5">Selamat Datang di Portal Rumah Tahfizh Akhwat Raudhatul Jannah</h1>
         <p class="card-text p-4 text-justify text-white-50">Pastikan kamu sudah terdaftar sebagai siswa RTA untuk dapat mengakses halaman selanjutnya.</p>
       </div>
     </div>
@@ -31,7 +31,7 @@
               <input type="password" name="password" id="password" class="form-control" placeholder="Password">
               <label for="password">Password</label>
             </div>
-            <button class="w-100 btn btn-lg" style="background-color: #013A67; color: white" type="submit">Login</button>
+            <button class="w-100 btn btn-lg" style="background-color: #013A67; color: white" type="submit">Masuk</button>
           </form>
         </main>
     </div>

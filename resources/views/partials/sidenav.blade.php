@@ -1,6 +1,6 @@
-<aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light sidenav-active-square">
-    {{-- <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark gradient-shadow gradient-45deg-blue-grey-blue sidenav-active-square sidenav-gradient"> --}}
-    <div class="brand-sidebar">
+        <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark sidenav-active-square" style="background-color: #013A67;">
+
+    <div class="brand-sidebar " style="background-color: #013A67;">
         <div class="row mt-2">
             <div class="col s2 mt-2 pr-0 circle">
                 <a href="#">
@@ -9,7 +9,7 @@
             </div>
             <div class="col s9">
                 <a href="#">
-                    <p class="m-0 hide-on-med-and-down">{{auth()->user()->name}}</p>
+                    <p class="m-0 hide-on-med-and-down" style="color: antiquewhite">{{auth()->user()->name}}</p>
                 </a>
                 <p class="m-0 grey-text lighten-3 hide-on-med-and-down">{{auth()->user()->class}}</p>
             </div>
@@ -18,10 +18,10 @@
     <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out" data-menu="menu-navigation" data-collapsible="menu-accordion">
         @unless(auth()->user()->can('guru'))
         <li class="bold">
-            <a class="waves-effect waves-cyan {{ Request::is('dashboard') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}" href="/dashboard">
+            <a class="waves-effect waves-cyan {{ Request::is('dashboard') ? 'active gradient-shadow gradient-45deg-blue-grey-blue-grey ' : '' }}" href="/dashboard">
                 <i class="material-icons">dashboard</i>
                 <span class="menu-title" data-i18n="Documentation">
-                    Dashboard
+                    Ringkasan
                 </span>
             </a>
         </li>
@@ -35,19 +35,19 @@
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     <li>
-                        <a href="/guru" class="{{ Request::is('guru*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                        <a href="/guru" class="{{ Request::is('guru*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Second level">Data Guru</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/siswa" class="{{ Request::is('siswa*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                        <a href="/siswa" class="{{ Request::is('siswa*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Second level">Data Siswa</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/pendaftar" class="{{ Request::is('pendaftar*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                        <a href="/pendaftar" class="{{ Request::is('pendaftar*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Second level">Data Pendaftar</span>
                         </a>
@@ -65,7 +65,7 @@
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     @can('admin')
                     <li>
-                        <a href="/kelas" class="{{ Request::is('kelas*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                        <a href="/kelas" class="{{ Request::is('kelas*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Second level">Jadwal Kelas</span>
                         </a>
@@ -78,7 +78,7 @@
                         <div class="collapsible-body">
                           <ul class="collapsible" data-collapsible="accordion">
                             <li>
-                                <a href="/buat-jadwal" class="{{ Request::is('buat-jadwal*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                                <a href="/buat-jadwal" class="{{ Request::is('buat-jadwal*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                                     <i class="material-icons">radio_button_unchecked</i>
                                     <span data-i18n="Third level">Buat Jadwal</span>
                                 </a>
@@ -86,7 +86,7 @@
                           </ul>
                           <ul class="collapsible" data-collapsible="accordion">
                             <li>
-                                <a href="/daftar-pendaftar-ujian" class="{{ Request::is('daftar-pendaftar-ujian*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                                <a href="/daftar-pendaftar-ujian" class="{{ Request::is('daftar-pendaftar-ujian*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                                     <i class="material-icons">radio_button_unchecked</i>
                                     <span data-i18n="Third level">Daftar Pendaftar Ujian</span>
                                 </a>
@@ -97,7 +97,7 @@
                     @endcan
                     @can('guru')
                     <li>
-                        <a href="/setoran" class="{{ Request::is('setoran*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                        <a href="/setoran" class="{{ Request::is('setoran*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Second level">Setoran Hafalan</span>
                         </a>
@@ -105,7 +105,7 @@
                     @endcan
                     @can('siswa')
                     <li>
-                        <a href="/riwayat" class="{{ Request::is('riwayat*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                        <a href="/riwayat" class="{{ Request::is('riwayat*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Second level">Riwayat Hafalan</span>
                         </a>
@@ -124,20 +124,20 @@
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
                     @can('admin')
                     <li>
-                        <a href="/tagihan" class="{{ Request::is('tagihan*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                        <a href="/tagihan" class="{{ Request::is('tagihan*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Second level">Tagihan SPP</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/pembayaran" class="{{ Request::is('pembayaran*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                        <a href="/pembayaran" class="{{ Request::is('pembayaran*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Second level">Pembayaran SPP</span></a>
                     </li>
                     @endcan
                     @can('siswa')
                     <li>
-                        <a href="/pembayaran" class="{{ Request::is('pembayaran*')|| Request::is('bayar-spp*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}">
+                        <a href="/pembayaran" class="{{ Request::is('pembayaran*')|| Request::is('bayar-spp*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Second level">Tagihan SPP</span></a>
                     </li>
@@ -148,13 +148,13 @@
         @endunless
         @can('admin')
         <li class="bold">
-            <a class="waves-effect waves-cyan {{ Request::is('donasi*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}" href="/donasi">
+            <a class="waves-effect waves-cyan {{ Request::is('donasi*') ? 'active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}" href="/donasi">
                 <i class="material-icons">card_giftcard</i>
                 <span class="menu-title" data-i18n="Documentation">Donasi</span>
             </a>
         </li>
         <li class="bold">
-            <a class="waves-effect waves-cyan {{ Request::is('kritiksaran') ? 'active gradient-shadow gradient-45deg-blue-grey-blue' : '' }}" href="/kritiksaran">
+            <a class="waves-effect waves-cyan {{ Request::is('kritiksaran') ? 'active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}" href="/kritiksaran">
                 <i class="material-icons">insert_comment</i>
                 <span class="menu-title" data-i18n="Documentation">Kritik & Saran</span>
             </a>

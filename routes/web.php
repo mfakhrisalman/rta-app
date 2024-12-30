@@ -38,6 +38,7 @@ Route::get('/rta-mart', function () {
         "active" => "rtamart",
     ]);
 });
+
 Route::get('/galeri', function () {
     return view('landing_page.galeri', [
         "title" => "Galeri",

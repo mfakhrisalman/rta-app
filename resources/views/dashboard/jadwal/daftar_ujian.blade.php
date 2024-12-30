@@ -31,31 +31,44 @@
                                 </div>
                                 <input type="hidden" id="id" name="id" value="{{auth()->user()->id}}"/>
                                 <div class="row">
-                                    <div class="input-field col m6 s12">
-                                        @foreach($datas as $data)
-                                        <input type="text" class="validate" value="{{ $data->type_class }}" readonly>
-                                        <label for="year">Kelas Musyrifah</label>
-                                    </div>
-                                    <div class="input-field col m6 s12">
-                                        <input type="text" class="validate" value="{{ $data->type_class }}" readonly>
-                                        <label for="amount">Nama Musyrifah</label>
-                                    </div>                                
+                                    <!-- Kelas Musyrifah -->
+                                    @foreach($datas as $data)
+                                        <div class="input-field col s12 m6">
+                                            <input type="text" id="type_class" class="validate" value="{{ $data->type_class }}" readonly>
+                                            <label for="type_class">Kelas Musyrifah</label>
+                                        </div>
+                                        <!-- Nama Musyrifah -->
+                                        <div class="input-field col s12 m6">
+                                            <input type="text" id="name_teacher" class="validate" value="{{ $data->name_teacher }}" readonly>
+                                            <label for="name_teacher">Nama Musyrifah</label>
+                                        </div>   
                                     @endforeach
-                                    <div class="input-field col m6 s12">
-                                        <label for="amount">Jumlah Juz</label>
-                                        <input type="text" name="qty_juz" class="validate" required>
+                                
+                                    <!-- Jumlah Juz -->
+                                    <div class="input-field col s12 m6">
+                                        <input type="text" id="qty_juz" name="qty_juz" class="validate" required>
+                                        <label for="qty_juz">Jumlah Juz</label>
                                     </div>
-                                    <div class="input-field col m6 s12">
-                                        <label for="amount">Tabi'</label>
-                                        <select name="tabi" id="tabi">
-                                            <option value="">Pilih Tabi'</option>
+                                
+                                    <!-- Tabi' -->
+                                    <div class="input-field col s12 m6">
+                                        <select name="tabi" id="tabi" required>
+                                            <option value="" disabled selected>Pilih Tabi'</option>
                                             <option value="Tabi' Dalam">Tabi' Dalam</option>
                                             <option value="Tabi' Luar">Tabi' Luar</option>
                                         </select>
+                                        <label for="tabi">Tabi'</label>
                                     </div>
-                                        <input type="hidden" id="status" name="status" value="Sudah Daftar"/>
-                                    <button type="submit" class="waves-effect waves-light btn indigo">Daftar</button>
+                                
+                                    <!-- Hidden Status -->
+                                    <input type="hidden" id="status" name="status" value="Sudah Daftar"/>
+                                
+                                    <!-- Daftar Button -->
+                                    <div class="col s12">
+                                        <button type="submit" class="waves-effect waves-light btn indigo">Daftar</button>
+                                    </div>
                                 </div>
+                                
                             </form>
                         </div>
                     </div>
