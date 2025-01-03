@@ -21,13 +21,13 @@ class KritikSaranController extends Controller
             'name' => 'required',
             'email' => 'required',
             'message' => 'required',
+            'nohp' => 'required',
+            'status' => 'required',
         ]);
 
-        dd($validatedData);
-    
         KritikSaran::create($validatedData);
     
-        return redirect('/kontak')->with('success', 'Terima Kasih Atas Kritik & Sarannya');
+        return redirect('/kontak')->with('success', 'Terima kasih telah menghubungi kami');
     }
     /**
      * Show the form for creating a new resource.

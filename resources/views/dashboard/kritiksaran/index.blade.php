@@ -35,6 +35,7 @@
                                             <th>email</th>
                                             <th>nama</th>
                                             <th>pesan</th>
+                                            <th>no handphone</th>
                                             <th>tanggal</th>
                                         </tr>
                                     </thead>
@@ -45,6 +46,7 @@
                                             <td><a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ $kritiksaran->email }}" target="_blank">{{ $kritiksaran->email }}</a></td>
                                             <td>{{ $kritiksaran->name }}</td>
                                             <td>{{ $kritiksaran->message }}</td>
+                                            <td>{{ $kritiksaran->nohp }}</td>
                                             <td>{{ $kritiksaran->created_at }}</td>
                                           </tr>
                                     @endforeach

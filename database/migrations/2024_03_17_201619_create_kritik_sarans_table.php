@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('message');
+            $table->string('nohp');
+            $table->string('status');
             $table->timestamps();
         });
     }

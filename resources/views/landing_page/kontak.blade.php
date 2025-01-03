@@ -60,11 +60,16 @@
             <div class="form-floating">
               <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
               <label for="email">Email address</label>
-            </div>
+            </div>            
+            <div class="form-floating">
+              <input type="number" class="form-control form-callme-2" id="nohp" name="nohp" placeholder="Nomor Telepon" required>
+              <label for="message">No Handphone (WA)</label>
+            </div>            
             <div class="form-floating">
               <input type="text" class="form-control form-callme-2" id="message" name="message" placeholder="Pesan" required>
               <label for="message">Pesan</label>
             </div>
+            <input type="hidden" id="status" name="status" value="diproses" required>
             <div class="form-floating mb-lg-3">
             <button class="w-80 btn btn-lg" style="background-color: #013A67; color: white; width: 80%;" type="submit">Kirim</button>
             </div>
