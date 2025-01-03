@@ -16,29 +16,22 @@ class KelasBayarChart
 
     public function build(): \ArielMejiaDev\LarapexCharts\BarChart
     {
+        // Ambil tahun saat ini
+        $currentYear = date('Y');
+
         // Inisialisasi array untuk menyimpan jumlah siswa lunas dan belum lunas untuk setiap bulan
         $lunasData = [];
         $belumLunasData = [];
 
-        // Loop untuk bulan-bulan tertentu (misalnya, Januari hingga Desember)
-        $bulanTahun = [
-            ['Januari', 2024],
-            ['Februari', 2024],
-            ['Maret', 2024],
-            ['April', 2024],
-            ['Mei', 2024],
-            ['Juni', 2024],
-            ['Juli', 2024],
-            ['Agustus', 2024],
-            ['September', 2024],
-            ['Oktober', 2024],
-            ['November', 2024],
-            ['Desember', 2024],
+        // Daftar bulan
+        $bulan = [
+            'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+            'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
         ];
 
-        foreach ($bulanTahun as $bt) {
+        foreach ($bulan as $b) {
             // Ambil data tagihan untuk bulan dan tahun tertentu
-            $tagihan = Tagihan::where('month', $bt[0])->where('year', $bt[1])->get();
+            $tagihan = Tagihan::where('month', $b)->where('year', $currentYear)->get();
 
             // Hitung jumlah siswa yang sudah lunas dan belum lunas
             $lunas = $tagihan->where('status', 'Lunas')->count();
@@ -48,18 +41,14 @@ class KelasBayarChart
             $lunasData[] = $lunas;
             $belumLunasData[] = $belumLunas;
         }
-        
+
         return $this->chart->barChart()
             ->setTitle('Grafik Pembayaran')
-            ->setSubtitle('Tahun 2024')
+            ->setSubtitle("Tahun $currentYear")
             ->addData('Belum Lunas', $belumLunasData)
             ->addData('Lunas', $lunasData)
             ->setDataLabels(true)
-            ->setXAxis([
-                'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 
-                'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
-            ])
+            ->setXAxis($bulan)
             ->setHeight(287);
-            
     }
 }
