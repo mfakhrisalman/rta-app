@@ -130,5 +130,7 @@ Route::post('/daftar-ujian', [DaftarPendaftarUjianController::class, 'store']);
 Route::get('/change-password', [PasswordController::class, 'showChangePasswordForm'])->name('password.change');
 Route::post('/change-password', [PasswordController::class, 'updatePassword'])->name('password.update');
 
+Route::get('/edit-data-diri', [DashboardController::class, 'edit']);
+Route::post('/edit-data-diri', [DashboardController::class, 'update']);
 
 

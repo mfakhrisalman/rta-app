@@ -11,6 +11,7 @@ use App\Models\Tagihan;
 use App\Models\User;
 use ArielMejiaDev\LarapexCharts\LarapexChart; // Import LarapexChart
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -44,5 +45,42 @@ class DashboardController extends Controller
       $kelasBayarSpp = $kelasBayarChart->build();
         
         return view('dashboard.index', compact('data', 'dataKelas', 'spp', 'sppT', 'jumlahSiswaKelas','kelasBayarSpp','daftar_ujian'));
+    }
+    public function edit()
+    {
+        // Dapatkan nama pengguna yang sedang login
+        $userName = Auth::user()->name;
+        
+        // Ambil data dari model User berdasarkan nama pengguna
+        $data = User::where('name', $userName)->get();
+        // Kirim data ke view
+        return view('dashboard.edit_biodata', ['datas' => $data]);
+    }
+    public function update(Request $request)
+    {
+        // Validasi data yang diterima
+        $request->validate([
+            'id' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'nohp' => 'required',
+            'address' => 'required',
+            'birth_date' => 'required',
+        ]);
+    
+        // Cari jadwal berdasarkan id pengguna
+        $datadiri = User::where('id', $request->id)->first();
+    
+        if ($datadiri) {
+            // Update data
+            $datadiri->email = $request->email;
+            $datadiri->name = $request->name;
+            $datadiri->nohp = $request->nohp;
+            $datadiri->address = $request->address;
+            $datadiri->birth_date = $request->birth_date;
+            $datadiri->save();
+    
+        return redirect('/dashboard');
+        }
     }
 }

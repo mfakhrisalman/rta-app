@@ -169,6 +169,14 @@
                          <td>Ruangan</td>
                          <td>: {{ $kelas->room }}</td>
                      </tr>
+                     <tr>
+                     <td></td>
+                     <td>
+                        <div class="col s12 center-align">
+                           <a href="/edit-data-diri" class="waves-effect waves-light btn blue-btn center-align gradient-45deg-blue-teal">Edit Data Diri</a>
+                        </div>
+                     </td>
+                  </tr>
                  @empty
                   <tr>
                      <td>Nama</td>
@@ -189,6 +197,14 @@
                   <tr>
                         <td>Ruangan</td>
                         <td>: </td>
+                  </tr>                  
+                  <tr>
+                     <td></td>
+                     <td>
+                        <div class="col s12 center-align">
+                           <a href="/edit-data-diri" class="waves-effect waves-light btn blue-btn center-align gradient-45deg-blue-teal">Edit Data Diri</a>
+                        </div>
+                     </td>
                   </tr>
 
                  @endforelse
