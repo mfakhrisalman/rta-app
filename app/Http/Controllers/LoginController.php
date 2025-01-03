@@ -38,25 +38,29 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
     
-        $field = 'email'; 
+        // Cek apakah email ada di database
+        $user = User::where('email', $credentials['email'])->first();
     
-        $user = null;
-        if($field === 'email'){
-            $user = Auth::attempt(['email' => $credentials['email'], 'password' => $credentials['password']]);
+        if (!$user) {
+            // Jika email tidak ditemukan
+            return back()->with('loginError', 'Email tidak terdaftar!');
         }
     
-        if ($user) {
-            // Pengecekan is_guru
-            if (auth()->user()->is_guru) {
-                return redirect()->to('/setoran');
-            } else {
-                $request->session()->regenerate();
-                return redirect()->intended('/dashboard');
-            }
+        // Cek apakah password benar
+        if (!Auth::attempt(['email' => $credentials['email'], 'password' => $credentials['password']])) {
+            // Jika email benar tetapi password salah
+            return back()->with('loginError', 'Password salah!');
         }
-        
-        return back()->with('loginError', 'Login Gagal!');
+    
+        // Jika email dan password benar
+        if ($user->is_guru) {
+            return redirect()->to('/setoran');
+        } else {
+            $request->session()->regenerate();
+            return redirect()->intended('/dashboard');
+        }
     }
+    
     
     public function daftarBerhasil()
     {
