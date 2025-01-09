@@ -61,8 +61,8 @@ Route::get('/donasi', function () {
 
 Route::get('/daftar-reguler', function () {
 return view('landing_page.daftar', [
-        "title" => "Daftar Kelas Reguler",
-        "program" => "Kelas Reguler",
+        "title" => "Daftar Kelas Dewasa Reguler",
+        "program" => "Kelas Dewasa Reguler",
         "deskripsi" => "Pertemuan untuk menghafal diadakan 2 kali dalam seminggu",
         "waktu" => "Senin - Jum'at",
     ]);

@@ -37,7 +37,7 @@
                                                     <option value="Kelas Anak-anak">Kelas Anak-anak</option>
                                                     <option value="Kelas Remaja">Kelas Remaja</option>
                                                     <option value="Kelas Pekerja">Kelas Pekerja</option>
-                                                    <option value="Kelas Reguler">Kelas Reguler</option>
+                                                    <option value="Kelas Dewasa Reguler">Kelas Dewasa Reguler</option>
                                                 </select>
                                                 <label>Kelas</label>
                                             </div>

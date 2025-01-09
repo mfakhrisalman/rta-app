@@ -23,6 +23,7 @@
 </head>
 <body>
         <div class="container-fluid">
+
           <div class="row">
             <div class="col-sm-5 px-0 d-none d-lg-block ">
                   <div class="card mw-100 mb-3 mh-100" style="background-color: #013A67; border-radius: 16px; height:725px; width: 607px; margin: 10px 5px 15px 20px;">
@@ -48,6 +49,17 @@
               <div class="col-lg-6 text-black p-5">
                 <main class="form-daftar">
                   <h1>Pendaftaraan Tahfizh</h1>
+                  @if ($errors->any())
+            <div class="col s12">
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        @endif
                     <form action="/daftar" method="post"> 
                       @csrf
                       <div class="form-floating">

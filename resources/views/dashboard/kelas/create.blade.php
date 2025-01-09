@@ -43,7 +43,7 @@
                                                     <option>--Pilih Kelas--</option>
                                                     <option value="Kelas Anak-anak">Kelas Anak-anak</option>
                                                     <option value="Kelas Remaja">Kelas Remaja</option>
-                                                    <option value="Kelas Reguler">Kelas Reguler</option>
+                                                    <option value="Kelas Dewasa Reguler">Kelas Dewasa Reguler</option>
                                                     <option value="Kelas Pekerja">Kelas Pekerja</option>
                                                 </select>
                                                 <label>Kelas</label>

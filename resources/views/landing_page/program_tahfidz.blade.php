@@ -12,7 +12,7 @@
     <div class="card">
       <img src="img/reguler.png" class="card-img-top" alt="Kelas Reguler">
       <div class="card-body">
-        <h5 class="card-title">Kelas Reguler </h5>
+        <h5 class="card-title">Kelas Dewasa Reguler </h5>
         <p class="card-text">Kelas yang dikhususkan untuk Ibu Rumah Tangga</p>
         <small>Senin - Jumat</small>
       </div>

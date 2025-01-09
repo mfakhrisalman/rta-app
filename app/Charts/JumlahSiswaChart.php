@@ -16,18 +16,18 @@ class JumlahSiswaChart
 
     public function build(): \ArielMejiaDev\LarapexCharts\PieChart
     {
-        $siswa = User::where('is_siswa', true)->whereIn('class', ['Kelas Anak-anak', 'Kelas Remaja', 'Kelas Reguler', 'Kelas Pekerja'])->get();
+        $siswa = User::where('is_siswa', true)->whereIn('class', ['Kelas Anak-anak', 'Kelas Remaja', 'Kelas Dewasa Reguler', 'Kelas Pekerja'])->get();
 
         $data = [
             $siswa->where('class','Kelas Anak-anak')->count(),
             $siswa->where('class','Kelas Remaja')->count(),
-            $siswa->where('class','Kelas Reguler')->count(),
+            $siswa->where('class','Kelas Dewasa Reguler')->count(),
             $siswa->where('class','Kelas Pekerja')->count(),
         ];
         $label=[
             'Kelas Anak-anak',
             'Kelas Remaja',
-            'Kelas Reguler',
+            'Kelas Dewasa Reguler',
             'Kelas Pekerja',
         ];
 

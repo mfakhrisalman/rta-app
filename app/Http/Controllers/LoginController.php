@@ -20,17 +20,24 @@ class LoginController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'birth_date' => 'required',
-            'email' => 'required',
+            'email' => 'required|email|unique:users,email',
             'nohp' => 'required',
             'address' => 'required',
             'class' => 'required',
             'status' => 'required',
         ]);
     
-        User::create($validatedData);
+        try {
+            // Jika validasi berhasil, buat user baru
+            User::create($validatedData);
     
-        return redirect('/daftar-berhasil')->with('success', 'Registrasi berhasil, Silahkan Login');
+            return redirect('/daftar-berhasil')->with('success', 'Registrasi berhasil, Silahkan Login');
+        } catch (\Exception $e) {
+            // Menangani error jika ada masalah saat pembuatan user (misalnya email sudah digunakan)
+            return redirect()->back()->withErrors(['email' => 'Email sudah digunakan.'])->withInput();
+        }
     }
+    
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([

@@ -44,7 +44,7 @@
                                                     <option>--Pilih Kelas--</option>
                                                     <option value="Kelas Anak-anak" {{ old('name_class', $kelas->name_class) == 'Kelas Anak-anak' ? 'selected' : '' }}>Kelas Anak-anak</option>
                                                     <option value="Kelas Remaja" {{ old('name_class', $kelas->name_class) == 'Kelas Remaja' ? 'selected' : '' }}>Kelas Remaja</option>
-                                                    <option value="Kelas Reguler" {{ old('name_class', $kelas->name_class) == 'Kelas Reguler' ? 'selected' : '' }}>Kelas Reguler</option>
+                                                    <option value="Kelas Dewasa Reguler" {{ old('name_class', $kelas->name_class) == 'Kelas Dewasa Reguler' ? 'selected' : '' }}>Kelas Dewasa Reguler</option>
                                                     <option value="Kelas Pekerja" {{ old('name_class', $kelas->name_class) == 'Kelas Pekerja' ? 'selected' : '' }}>Kelas Pekerja</option>
                                                 </select>
                                                 <label>Kelas</label>
