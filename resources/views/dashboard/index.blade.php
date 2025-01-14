@@ -121,7 +121,7 @@
          @endcan
 
          @can('siswa')
-         @php
+         {{-- @php
          $belumLunas = $spp->contains('status', 'Belum Lunas');
          @endphp
          <div class="col s12">
@@ -142,7 +142,29 @@
                   </div>
                </div>
          @endif
-         </div>
+         </div> --}}
+         @php
+         $belumDaftar = $daftar_ujian->contains('status', 'Belum Daftar');
+         $sudahDaftar = $daftar_ujian->contains('status', 'Sudah Daftar');
+         @endphp
+         <div class="col s12">
+            @if($belumDaftar)
+                  <div class="card-alert card gradient-45deg-purple-deep-orange">
+                     <div class="card-content white-text">
+                        <p>
+                           <i class="material-icons">info_outline</i> INFO : Anda belum mendaftar untuk ujian. Segera lakukan pendaftaran.
+                        </p>
+                     </div>
+                  </div>
+            @else
+                  <div class="card-alert card gradient-45deg-green-teal">
+                     <div class="card-content white-text">
+                        <p>
+                           <i class="material-icons">check</i> SUKSES : Anda telah berhasil mendaftar untuk ujian. Semoga sukses!
+                     </div>
+                  </div>
+            @endif
+            </div>
          <div class="col s12 m8 card-width">
             <div class="card border-radius-6">
               <div class="card-content center-align">
@@ -214,23 +236,6 @@
               </div>
             </div>
          </div>
-
-         <div class="col s12 m6 l6 xl3">
-            <div class="card gradient-45deg-red-pink gradient-shadow min-height-100 white-text animate fadeLeft">
-               <div class="padding-4">
-                  <div class="row">
-                     <div class="col s7 m7">
-                        <i class="material-icons background-round mt-5">attach_money</i>
-                        <p>SPP</p>
-                     </div>
-                     <div class="col s5 m5 right-align">
-                        <h5 class="mb-0 white-text">{{ $sppT  }}</h5>
-                        <p class="no-margin">Tagihan</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
          @php
          $belumDaftar = $daftar_ujian->contains('status', 'Belum Daftar');
          $sudahDaftar = $daftar_ujian->contains('status', 'Sudah Daftar');
@@ -250,6 +255,23 @@
                </div>
             </div>
          @endif
+         {{-- <div class="col s12 m6 l6 xl3">
+            <div class="card gradient-45deg-red-pink gradient-shadow min-height-100 white-text animate fadeLeft">
+               <div class="padding-4">
+                  <div class="row">
+                     <div class="col s7 m7">
+                        <i class="material-icons background-round mt-5">attach_money</i>
+                        <p>SPP</p>
+                     </div>
+                     <div class="col s5 m5 right-align">
+                        <h5 class="mb-0 white-text">{{ $sppT  }}</h5>
+                        <p class="no-margin">Tagihan</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> --}}
+     
 
 
          @endcan
