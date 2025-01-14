@@ -15,18 +15,23 @@ class DaftarPendaftarUjianController extends Controller
      */
     public function index()
     {
-        $data = User::with('jadwals');
+        $data = User::with(['jadwals', 'kelasDetails']);
 
         if (auth()->user()->is_admin) {
             $data = $data->get();
         } else {
             $data = $data
                 ->where('is_siswa', true)
-                ->whereHas('jadwals', function ($query) {
-                    $query->where('id_jadwal', auth()->user()->id);
+                ->whereHas('kelasDetails', function ($query) {
+                    $query->whereHas('jadwals', function ($subQuery) {
+                        $subQuery->where('id_jadwal', auth()->user()->id)
+                                 ->whereColumn('kelas_details.name_student', 'jadwals.name')
+                                 ->whereColumn('kelas_details.type_class', 'jadwals.class');
+                    });
                 })
                 ->get();
         }
+    
         return view('dashboard.jadwal.pendaftar_ujian', ['datas' => $data]);
     }
 

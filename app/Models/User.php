@@ -59,4 +59,8 @@ public function jadwals()
 {
     return $this->hasMany(Jadwal::class, 'id_jadwal', 'id');
 }
+public function kelasDetails()
+{
+    return $this->hasOne(KelasDetail::class, 'name_student', 'name');
+}
 }

@@ -89,7 +89,7 @@
                                         <th>Kelas</th>
                                         <th>Jumlah Hafalan</th>
                                         <th>Tabi'</th>
-                                        <th>Nama Ujian</th>
+                                        <th>Nama Kelas</th>
                                         <th>Tahun</th>
                                         <th>Status</th>
                                     </tr>
@@ -103,7 +103,7 @@
                                             <td>{{ $data->class }}</td>
                                             <td>{{ $jadwal->qty_juz }}</td>
                                             <td>{{ $jadwal->tabi }}</td>
-                                            <td>{{ $jadwal->name }}</td>
+                                            <td>{{ $data->kelasDetails->name_class ?? 'Belum ada kelas' }}</td>
                                             <td>{{ $jadwal->year }}</td>
                                             <td>
                                                 <span class="chip {{ $jadwal->status === 'Sudah Daftar' ? 'green lighten-5' : ($jadwal->status === 'Belum Daftar' ? 'blue lighten-5' : '') }}">
