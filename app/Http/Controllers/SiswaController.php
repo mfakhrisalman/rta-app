@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class SiswaController extends Controller
 {
     /**
@@ -12,7 +12,19 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        $siswa = User::where('is_siswa',true)->get(); 
+        $siswa = DB::table('users')
+                    ->leftJoin('kelas_details', function ($join) {
+                        $join->on('kelas_details.name_student', '=', 'users.name')
+                             ->whereColumn('kelas_details.type_class', '=', 'users.class');
+                    })
+                    ->where('users.is_siswa', true)
+                    ->select(
+                        'users.*',
+                        DB::raw('COALESCE(kelas_details.name_class, "Belum ada kelas") as name_class'),
+                        DB::raw('COALESCE(kelas_details.type_class, "Belum ada kelas") as type_class')
+                    )
+                    ->get();
+    
         return view('dashboard.siswa.index', ['siswas' => $siswa]);
     }
     /**

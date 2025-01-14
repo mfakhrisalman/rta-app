@@ -36,6 +36,7 @@
                                             <th>email</th>
                                             <th>nama</th>
                                             <th>kelas</th>
+                                            <th>nama kelas</th>
                                             <th>nohp</th>
                                             <th>status</th>
                                             <th>edit</th>
@@ -50,6 +51,7 @@
                                             <td><a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ $siswa->email }}" target="_blank">{{ $siswa->email }}</a></td>
                                             <td>{{ $siswa->name }}</td>
                                             <td>{{ $siswa->class }}</td>
+                                            <td>{{ $siswa->name_class ?? 'N/A' }}</td>
                                             <td><a href="https://wa.me/62{{ $siswa->nohp }}" target="_blank">{{ $siswa->nohp }}</a></td>
                                             <td>
                                                 <span class="chip {{ $siswa->status === 'Tidak Aktif' ? 'red lighten-5' : 'green lighten-5' }}">
