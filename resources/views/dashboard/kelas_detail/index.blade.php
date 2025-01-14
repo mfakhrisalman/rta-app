@@ -85,7 +85,7 @@
                                     <td class="users-view-latest-activity indigo-text">: {{ $kelas->name_class }}</td>
                                 </tr>
                                 <tr>
-                                  <td>Musyrifah</td>
+                                  <td>Mu'allimat</td>
                                   <td class="users-view-latest-activity indigo-text">: {{ $kelas->name_teacher }}</td>
                                 </tr>
                                 <tr>

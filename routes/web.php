@@ -19,6 +19,7 @@ use App\Http\Controllers\RiwayatController;
 use App\Http\Controllers\SetoranController;
 use App\Http\Controllers\TagihanController;
 use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\RiwayatUjianController;
 
 Route::get('/', function () {
     return view('landing_page.beranda', [
@@ -133,4 +134,5 @@ Route::post('/change-password', [PasswordController::class, 'updatePassword'])->
 Route::get('/edit-data-diri', [DashboardController::class, 'edit']);
 Route::post('/edit-data-diri', [DashboardController::class, 'update']);
 
+Route::resource('/catatan-ujian', RiwayatUjianController::class);
 

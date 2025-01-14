@@ -53,12 +53,12 @@
                                         <div class="col s12 ">
                                             <div class="input-field">
                                                 <select name="name_teacher">
-                                                    <option>--Pilih Musyifah--</option>
+                                                    <option>--Pilih Mu'allimat--</option>
                                                     @foreach ($gurus as $guru)
                                                         <option value="{{ $guru->name }}" {{  old('name_teacher', $kelas->name_teacher) == $guru->name ? 'selected' : '' }}>{{ $guru->name }}</option>
                                                     @endforeach
                                                 </select>
-                                                <label>Musyrifah</label>
+                                                <label>Mu'allimat</label>
                                             </div>
                                         </div>
                                         <div class="col s12 ">

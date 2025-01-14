@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Jadwal;
 use App\Models\KelasDetail;
+use App\Models\RiwayatUjian;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -54,26 +56,44 @@ class DaftarPendaftarUjianController extends Controller
      */
     public function store(Request $request)
     {
-        // Validasi data yang diterima
+
+        // Validate the data
         $request->validate([
             'id' => 'required',
             'tabi' => 'required',
             'qty_juz' => 'required|integer',
             'status' => 'required',
+            'name_student' => 'required',
+            'class' => 'required',
+            'name_class' => 'required',
         ]);
-    
-        // Cari jadwal berdasarkan id pengguna
+        // Find the 'Jadwal' based on the user ID
         $jadwal = Jadwal::where('id_jadwal', $request->id)->first();
     
         if ($jadwal) {
-            // Update data
+            // Update 'Jadwal' data
             $jadwal->tabi = $request->tabi;
             $jadwal->qty_juz = $request->qty_juz;
             $jadwal->status = $request->status;
             $jadwal->save();
     
-        return redirect('/dashboard');
+            // Store the new data in 'RiwayatUjian'
+            $riwayatUjian = new RiwayatUjian();
+            $riwayatUjian->id_student = $request->id;
+            $riwayatUjian->name_student = $request->name_student;
+            $riwayatUjian->class = $request->class;
+            $riwayatUjian->name_class = $request->name_class;
+            $riwayatUjian->year = Carbon::now()->year;  // Set the current year
+            $riwayatUjian->tabi = $request->tabi;
+            $riwayatUjian->qty_juz = $request->qty_juz;
+            $riwayatUjian->status = $request->status;
+            $riwayatUjian->save();
+    
+            return redirect('/dashboard')->with('success', 'Data saved successfully!');
         }
+    
+        // If 'Jadwal' not found, return back with error
+        return back()->with('error', 'Jadwal not found!');
     }
 
     /**

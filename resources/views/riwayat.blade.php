@@ -39,7 +39,7 @@
                                             <th>mulai ayat</th>
                                             <th>akhir ayat</th>
                                             <th>kelas</th>
-                                            <th>musyrifah</th>
+                                            <th>mu'allimat</th>
                                             <th></th>
                                         </tr>
                                     </thead>

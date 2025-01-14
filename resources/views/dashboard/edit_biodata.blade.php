@@ -32,12 +32,12 @@
                                 </div>
                                 <input type="hidden" id="id" name="id" value="{{ $data->id }}"/>
                                 <div class="row">
-                                    <!-- Kelas Musyrifah -->
+                                    <!-- Kelas Mu'allimat -->
                                         <div class="input-field col s12 m6">
                                             <input type="date" id="birth_date" name="birth_date" class="validate" value="{{ $data->birth_date }}" require>
                                             <label for="birth_date">Tanggal Lahir</label>
                                         </div>
-                                        <!-- Nama Musyrifah -->
+                                        <!-- Nama Mu'allimat -->
                                         <div class="input-field col s12 m6">
                                             <input type="text" id="nohp" name="nohp" class="validate" value="{{ $data->nohp }}" require>
                                             <label for="nohp">Nomor Handphone</label>

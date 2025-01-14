@@ -37,7 +37,7 @@
                                             <th>jenis kelas</th>
                                             <th>surah</th>
                                             <th>keterangan</th>
-                                            <th>musyrifah</th>
+                                            <th>Mu'allimat</th>
                                         </tr>
                                     </thead>
                                     <tbody>

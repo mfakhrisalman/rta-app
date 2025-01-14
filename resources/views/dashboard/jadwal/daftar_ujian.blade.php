@@ -21,7 +21,7 @@
                                 @csrf
                                 <div class="row">
                                     <div class="input-field col m6 s12">
-                                        <input type="text" value="{{auth()->user()->name}}" readonly>
+                                        <input type="text" name="name_student" value="{{auth()->user()->name}}" readonly>
                                         <label>Nama</label>
                                     </div>
                                     <div class="input-field col m6 s12">
@@ -31,22 +31,22 @@
                                 </div>
                                 <input type="hidden" id="id" name="id" value="{{auth()->user()->id}}"/>
                                 <div class="row">
-                                    <!-- Kelas Musyrifah -->
+                                    <!-- Kelas  -->
                                     @foreach($datas as $data)
                                         <div class="input-field col s12 m6">
-                                            <input type="text" id="type_class" class="validate" value="{{ $data->type_class }}" readonly>
-                                            <label for="type_class">Kelas Musyrifah</label>
+                                            <input type="text" id="name_class" name="name_class" class="validate" value="{{ $data->name_class }}" readonly>
+                                            <label for="type_class">Nama Kelas</label>
                                         </div>
-                                        <!-- Nama Musyrifah -->
+                                        <!-- Nama  -->
                                         <div class="input-field col s12 m6">
                                             <input type="text" id="name_teacher" class="validate" value="{{ $data->name_teacher }}" readonly>
-                                            <label for="name_teacher">Nama Musyrifah</label>
+                                            <label for="name_teacher">Nama Mu'allimat</label>
                                         </div>   
                                     @endforeach
                                 
                                     <!-- Jumlah Juz -->
                                     <div class="input-field col s12 m6">
-                                        <input type="text" id="qty_juz" name="qty_juz" class="validate" required>
+                                        <input type="number" id="qty_juz" name="qty_juz" class="validate" required>
                                         <label for="qty_juz">Jumlah Juz</label>
                                     </div>
                                 

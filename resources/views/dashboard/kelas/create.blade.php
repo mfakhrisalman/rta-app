@@ -57,7 +57,7 @@
                                                     <option value="{{ $guru->name }}">{{ $guru->name }}</option>
                                                 @endforeach
                                                 </select>
-                                                <label>Musyrifah</label>
+                                                <label>Mu'allimat</label>
                                             </div>
                                         </div>
                                         <div class="col s12 ">

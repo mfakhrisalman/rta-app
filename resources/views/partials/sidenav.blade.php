@@ -56,7 +56,7 @@
             </div>
         </li>
         @endcan
-        <li class="{{ Request::is('kelas*')|| Request::is('buat-jadwal*') ||Request::is('daftar-pendaftar-ujian*') || Request::is('setoran')|| Request::is('riwayat') ? 'active bold' : '' }}">
+        <li class="{{ Request::is('kelas*')|| Request::is('buat-jadwal*') ||Request::is('catatan-ujian*') ||Request::is('daftar-pendaftar-ujian*') || Request::is('setoran')|| Request::is('riwayat') ? 'active bold' : '' }}">
             <a class="collapsible-header waves-effect waves-cyan " href="#">
                 <i class="material-icons">school</i>
                 <span class="menu-title" data-i18n="Menu levels">Akademik</span>
@@ -92,6 +92,14 @@
                                 </a>
                             </li>
                           </ul>
+                          <ul class="collapsible" data-collapsible="accordion">
+                            <li>
+                                <a href="/catatan-ujian" class="{{ Request::is('catatan-ujian*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
+                                    <i class="material-icons">radio_button_unchecked</i>
+                                    <span data-i18n="Third level">Riwayat Ujian</span>
+                                </a>
+                            </li>
+                          </ul>
                         </div>
                       </li>
                     @endcan
@@ -108,6 +116,12 @@
                         <a href="/riwayat" class="{{ Request::is('riwayat*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
                             <i class="material-icons">radio_button_unchecked</i>
                             <span data-i18n="Second level">Riwayat Hafalan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/catatan-ujian" class="{{ Request::is('catatan-ujian*') ? 'active active gradient-shadow gradient-45deg-blue-grey-blue-grey' : '' }}">
+                            <i class="material-icons">radio_button_unchecked</i>
+                            <span data-i18n="Second level">Riwayat Ujian</span>
                         </a>
                     </li>
                     @endcan

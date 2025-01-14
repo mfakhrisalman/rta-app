@@ -162,7 +162,7 @@
                          <td>: {{ $kelas->type_class }}</td>
                      </tr>
                      <tr>
-                         <td>Musyrifah</td>
+                         <td>Mu'allimat</td>
                          <td>: {{ $kelas->name_teacher }}</td>
                      </tr>
                      <tr>
@@ -191,7 +191,7 @@
                         <td>: </td>
                   </tr>
                   <tr>
-                        <td>Musyrifah</td>
+                        <td>Mu'allimat</td>
                         <td>: </td>
                   </tr>
                   <tr>
